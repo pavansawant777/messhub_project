@@ -1,0 +1,27 @@
+<%- include("navbar.ejs") %>
+<form action="/admin/save_location" method="post" enctype="multipart/form-data">
+    <div class="container p-3 bg-white border shadow">
+        <div class="row">
+            <div class="col-md-12 mt-2 mb-3">
+                <h3 class="heading">Location :-</h3>
+            </div>
+            <div class="col-md-6 mt-2 mb-3">
+                <h4>Enter Location link :-</h4>
+                <input type="text" name="location_link" class="form-control">
+            </div>
+            <div class="col-md-4 mt-3 mb-3 text-center">
+                <button class="btn btn-primary mt-4">Save Location</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="container p-3 bg-white border shadow mt-5 text-center">
+    <div class="row">
+        <div class="col-md-12 mt-2 mb-3">
+            <iframe src="<%=location.location_link%>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+
+<%- include("footer.ejs") %>

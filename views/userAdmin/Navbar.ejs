@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User Admin</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords"
+        content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="codedthemes" />
+
+    <link rel="icon"
+        href="https://happyhomekitchenfood.in/wp-content/uploads/2021/11/tiffin-service-andheri-east-trans-logo.png"
+        type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+
+    <link rel="stylesheet" type="text/css" href="/assets/icon/themify-icons/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/icon/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/jquery.mCustomScrollbar.css">
+
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        .heading {
+            background-image: url('http://localhost:1000/assets/images/breadcrumb-bg.jpg');
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+            background-size: cover;
+        }
+
+        .images_css {
+            background-image: url('http://localhost:1000/assets/images/breadcrumb-bg.jpg') !important;
+
+        }
+
+        .subheading {
+            background: linear-gradient(45deg, #685099 0%, #595591 60%, #4E5A8B 60%, #37627C 62%, #ffad26 62%, 63%, #d77045 63%, #d77045 64%, #ffad26 64%, #ffad26 65%, #525187 65%, white 80%) !important;
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+        }
+
+        .background_overlp {
+            position: relative;
+            z-index: 99999999999;
+        }
+
+        .centers {
+            display: grid;
+            align-items: center;
+            text-align: left;
+        }
+
+
+        .heading {
+            background: linear-gradient(45deg, #685099 0%, #595591 60%, #4E5A8B 60%, #37627C 62%, #ffad26 62%, 63%, #d77045 63%, #d77045 64%, #ffad26 64%, #ffad26 65%, #525187 65%, white 80%);
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+        }
+
+        /*
+          .subheading{
+            background: linear-gradient(45deg, #62add3 0%, #62add3 60%, #62add3 60%, #37627C 62%, #ffad26 62%, 63%, #d77045 63%, #d77045 64%, #ffad26 64%, #ffad26 65%, #876b51 65%, white 80%);
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+          } */
+
+        .back_color {
+            background: linear-gradient(to right, #574476, #525187) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <!-- <nav class="navbar header-navbar page-header shadow images_css pcoded-header"> -->
+            <nav class="navbar header-navbar back_color shadow pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <div class="mobile-search waves-effect waves-light">
+                            <div class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Keyword">
+                                        <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/userAdmin/" class="text-center ">
+                            <h5>Mess</h5>
+                        </a>
+                        <a class="mobile-options waves-effect waves-light">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+
+
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                </div>
+                            </li>
+                            <li class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <ul class="nav-right">
+                            <li class="user-profile header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+
+
+                                    <% for(var i=0;i<user_kyc_profile_data_complated.length;i++) { %>
+                                        <img src="/uploads/<%=user_kyc_profile_data_complated[i].user_admin_photo%>"
+                                            style="border-radius: 50%;" height="40px" width="50px" />
+                                        <% } %>
+
+
+                                </a>
+                                <ul class="show-notification profile-notification">
+
+
+                                    <li class="waves-effect waves-light">
+                                        <a href="/userAdmin/user_Admin_profile">
+                                            <i class="ti-user"></i> Profile
+                                        </a>
+                                    </li>
+
+                                    <li class="waves-effect waves-light">
+                                        <a href="/logout">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="">
+                                <div class="main-menu-header">
+
+
+                                    <% for(var i=0;i<user_kyc_profile_data_complated.length;i++) { %>
+                                        <img src="/uploads/<%=user_kyc_profile_data_complated[i].user_admin_photo%>"
+                                            style="border-radius: 50%;" height="60px" width="50px" />
+
+                                        <div class="user-details">
+                                            <span id="more-details">
+                                                <%=user_kyc_profile_data_complated[i].user_admin_fname%>
+                                                    <%=user_kyc_profile_data_complated[i].user_admin_lname%>
+                                            </span>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <div class="main-menu-content">
+                                    <ul>
+                                        <li class="more-details">
+                                            <a href="/userAdmin/user_Admin_profile"><i class="ti-user"></i>View
+                                                Profile</a>
+                                            <a href="/logout"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="p-15 p-b-0">
+                                <form class="form-material">
+                                    <div class="form-group form-primary">
+                                        <input type="text" name="footer-email" class="form-control" required="">
+                                        <span class="form-bar"></span>
+                                        <label class="float-label"><i class="fa fa-search m-r-10"></i>Search
+                                            Friend</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div> -->
+                            <ul class="pcoded-item  pcoded-left-item">
+                                <li class="active ">
+                                    <a href="/userAdmin/" class="waves-effect waves-dark "
+                                        style="background-color: #574476;">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Website Component</div>
+                            <ul class="pcoded-item pcoded-left-item">
+
+                                <li>
+                                    <a href="/userAdmin/user_admin_kyc_form" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b></b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">KYC Form</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/userAdmin/user_Admin_profile" class="">
+                                        <span class="pcoded-micon"><i class="ti-user"></i><b></b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Profile</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Mess
+                                            Components</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="/userAdmin/mess_details" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Mess
+                                                    Details</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="/userAdmin/mess_lunchs" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext"
+                                                    data-i18n="nav.basic-components.alert">Lunch</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="/userAdmin/mess_dinner" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext"
+                                                    data-i18n="nav.basic-components.alert">Dinner</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Service</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="/userAdmin/mess_services" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Mess
+                                                    Service</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                            <a href="/userAdmin/mess_services1" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Mess
+                                                    Service 1</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                            <a href="/userAdmin/mess_services2" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Mess
+                                                    Service 2</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Blog</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="/userAdmin/mess_blogs" class="waves-effect waves-dark">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Mess
+                                                    Blogs</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                                <!-- <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Mess</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+
+                                    <ul class="pcoded-submenu">
+                                        
+                                    </ul>
+                                </li> -->
+
+
+                                <li>
+                                    <a href="/logout" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i
+                                                class="ti-layout-sidebar-left"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Logout</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+
+
+                    </nav>
+
+                    <div class="pcoded-content">
+                        <div class="back_color text-white">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="page-header-title">
+                                            <h5 class="m-b-10">Dashboard</h5>
+                                            <p class="m-b-0">Welcome to Mess</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="breadcrumb-title">
+                                            <li class="breadcrumb-item">
+                                                <a href="/userAdmin/"> <i class="fa fa-home"></i> </a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="/userAdmin/">Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">

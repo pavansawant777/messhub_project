@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <base href="./">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+        <meta name="author" content="Łukasz Holeczek">
+        <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+        <title>Mess System</title>
+        
+      <link rel="icon" href="https://happyhomekitchenfood.in/wp-content/uploads/2021/11/tiffin-service-andheri-east-trans-logo.png" type="image/x-icon">
+
+
+        <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+         -->
+        
+        <link rel="manifest" href="assets/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Vendors styles-->
+        <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+        <link rel="stylesheet" href="css/vendors/simplebar.css">
+        <!-- Main styles for this application-->
+        <link href="/admin/css/style.css" rel="stylesheet">
+        <!-- We use those styles to show code examples, you should remove them in your application.-->
+        <link href="css/examples.css" rel="stylesheet">
+        <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+
+        <style>
+          /* .heading{
+            background: linear-gradient(45deg, #685099 0%, #595591 60%, #4E5A8B 60%, #37627C 62%, #ffad26 62%, 63%, #d77045 63%, #d77045 64%, #ffad26 64%, #ffad26 65%, #525187 65%, white 80%);
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+          }
+          
+          .subheading{
+            background: linear-gradient(45deg, #62add3 0%, #62add3 60%, #62add3 60%, #37627C 62%, #ffad26 62%, 63%, #d77045 63%, #d77045 64%, #ffad26 64%, #ffad26 65%, #876b51 65%, white 80%);
+            border-left: 5px solid #FFC241;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px 8px 10px;
+            font-size: 22px;
+          } */
+        </style>
+
+
+      </head>
+      <body>
+        <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar" style="background:linear-gradient(to right, #574476, #525187) ;">
+          <div class="sidebar-brand d-none d-md-flex pt-3 pb-3">
+            <img src="/logodj.png" width="60px">
+             <h5 class="ms-2">Mess System</h5>
+          </div>
+          <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">  
+            <li class="nav-item"><a class="nav-link" href="/admin/">
+              <svg class="nav-icon">
+                <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-3d"></use>
+              </svg>Dashboard</a>
+            </li> 
+
+          
+        <li class="nav-group">
+          <a class="nav-link nav-group-toggle" >
+          <svg class="nav-icon">
+            <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-blind"></use>
+          </svg>Home Page</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="/admin/slider"><span class="nav-icon"></span>Slider</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/home_about1"><span class="nav-icon"></span>Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/home_about2"><span class="nav-icon"></span>Our Mission</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/home_about3"><span class="nav-icon"></span>Our Vision</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/home1"><span class="nav-icon"></span>Our Meal Plans</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/home2_bg"><span class="nav-icon"></span>Our Customer Review Background</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/reviews"><span class="nav-icon"></span> Customer Review </a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/company_info"><span class="nav-icon"></span>Company Info</a></li>
+        </ul>
+        </li> 
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-playlist-add""></use>
+          </svg>About Us</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="/admin/aboutus_banner"><span class="nav-icon"></span>About Us Banner</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/about1"><span class="nav-icon"></span>Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/about2"><span class="nav-icon"></span>Our Mission</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/about3"><span class="nav-icon"></span>Our Vision</a></li>
+        </ul>
+      </li>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
+          </svg>User Mess Approval</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="/admin/mace_approvel_pending"><span class="nav-icon"></span>Mess Approval Pending</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/mace_approvel_complated"><span class="nav-icon"></span>Mess Approval Complated</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-contact"></use>
+          </svg>User Contact</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="/admin/manage_contact_start_page"><span class="nav-icon"></span>Contact Starting Page</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/location"><span class="nav-icon"></span>Location ( Map )</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/contact_list"><span class="nav-icon"></span>Contact List</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/contact_address"><span class="nav-icon"></span>Contact Address</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-storage"></use>
+        </svg>Service</a>
+      <ul class="nav-group-items">
+        <li class="nav-item"><a class="nav-link" href="/admin/service_start_page"><span class="nav-icon"></span>Service Starting Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/mess_services"><span class="nav-icon"></span>Service's</a></li>
+      </ul>
+    </li>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-action-redo"></use>
+          </svg>Blog</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="/admin/blog_start_page"><span class="nav-icon"></span>Blog Start page</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/blog"><span class="nav-icon"></span>Blog</a></li>
+        </ul>
+      </li> 
+
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+        <svg class="nav-icon">
+          <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+        </svg>Menu</a>
+        <ul class="nav-group-items">
+          <li class="nav-item"><a class="nav-link" href="/admin/menu_start_page"><span class="nav-icon"></span>Menu lunch Page </a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/menu_start_page1"><span class="nav-icon"></span>Menu Dinner page</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/menu_lunch"><span class="nav-icon"></span>Menu Lunch</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/menu_dinner"><span class="nav-icon"></span>Menu Dinner</a></li>
+        </ul>
+      </li> 
+
+          </ul>
+          <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+          </div>
+          <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+            <header class="header header-sticky mb-4">
+              <div class="container-fluid">
+                <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                  <svg class="icon icon-lg">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                  </svg>
+                </button><a class="header-brand d-md-none" href="#">
+                  <svg width="118" height="46" alt="CoreUI Logo">
+                    <use xlink:href="assets/brand/coreui.svg#full"></use>
+                  </svg></a>
+              
+              <ul class="header-nav ms-3">
+                <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <div class="avatar avatar-md"><img class="avatar-img" src="/uploads/pd.png" alt="user@email.com"></div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end pt-0">
+                    <div class="dropdown-header bg-light py-2">
+                      <div class="fw-semibold">Account</div>
+                    </div>
+                    
+
+                    <div class="dropdown-header bg-light py-2">
+                    </div>
+                    <a class="dropdown-item" href="#">
+                      <svg class="icon me-2">
+                        <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                      </svg> Profile</a>
+ 
+                      <a class="dropdown-item" href="/admin/logout">
+                      <svg class="icon me-2">
+                        <use xlink:href="/admin/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                      </svg> Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          
+          </header>
+
+
+
+          <div class="body flex-grow-1 px-3">
+
+         

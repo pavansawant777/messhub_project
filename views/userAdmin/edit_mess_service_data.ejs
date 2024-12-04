@@ -1,0 +1,71 @@
+<%- include("Navbar.ejs")%>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<form class="pt-5 bg-white" action="/userAdmin/update_mess_service" method="post" enctype="multipart/form-data">
+    <div class="container  ">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Update Mess Service</span>
+            </h3>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="hidden" name="mess_service_id" value="<%=mess_edit_data.mess_service_id%>">
+            <label for="firstName">Service Heading</label>
+            <input type="text" class="form-control" name="service_heading" value="<%=mess_edit_data.service_heading%>" id="firstName" placeholder="Enter Service Heading">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName">Service Title</label>
+            <input type="text" class="form-control" id="lastName" value="<%=mess_edit_data.service_title%>" name="service_title" placeholder="Enter Service Title">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="image">Service Image</label>
+            <input type="file" class="form-control" id="file" value="<%=mess_edit_data.service_mess_image%>" name="service_mess_image" placeholder="Enter email">
+          </div>
+        </div>
+        <div class="col-md-3">
+            <img src="/uploads/<%=mess_edit_data.service_mess_image%>" width="150px">
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phone">Service Mess Title </label>
+            <input type="text" class="form-control" id="phone" value="<%=mess_edit_data.service_mess_title%>" name="service_mess_title" placeholder="Enter phone number">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="address">Service Mess description</label>
+            <input type="text" class="form-control" id="address" value="<%=mess_edit_data.service_mess_description%>" name="service_mess_description" placeholder="Enter address">
+          </div>
+        </div>
+
+
+      </div>
+      
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187">Update Service</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+<%- include("Footer.ejs")%>

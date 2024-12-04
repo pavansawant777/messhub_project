@@ -1,0 +1,59 @@
+<%- include("Navbar.ejs")%>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form class="pt-5 bg-white" action="/userAdmin/update_mess_blogs" method="post" enctype="multipart/form-data">
+    <div class="container  ">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Update Mess Blog</span>
+            </h3>
+        </div>
+    </div>
+    
+      <div class="row">
+        
+        <div class="col-md-3">
+          <div class="form-group">
+            <input type="hidden" name="mess_blogs_id" value="<%=mess_blogs_id_data.mess_blogs_id%>">
+            <label for="">Blog Image</label>
+            <input type="file" class="form-control" id="" name="mess_blog_images" value="<%=mess_blogs_id_data.mess_blog_images%>"  placeholder="Enter Mess Name">
+          </div>
+        </div>
+        <div class="col-md-3">
+            <img src="/uploads/<%=mess_blogs_id_data.mess_blog_images%>" width="150px">
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="messinfo">Blog Heading</label>
+              <input type="text" class="form-control" id="address" name="mess_blog_heading" value="<%=mess_blogs_id_data.mess_blog_heading%>" placeholder="Enter Blog Heading">
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="state">Blog Description</label>
+            <input type="text" class="form-control" id="state" name="mess_blog_description" value="<%=mess_blogs_id_data.mess_blog_description%>" placeholder="Enter Blog Description">
+          </div>
+        </div>
+        
+          
+      </div>
+      
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187;">Update Blogs</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+<%- include("Footer.ejs")%>

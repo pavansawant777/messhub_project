@@ -1,0 +1,68 @@
+<%- include("navbar.ejs") %>
+		<section>
+			<div class='Banner overflow-hidden col-md-12 col-sm-12 col-xs-12' style="background-image: url('https://greensoulkitchens.in/wp-content/uploads/2022/12/Mask-group-2.jpg'); background-repeat: no-repeat;background-size: cover;">
+				<div class='container'>
+					<div class='row d-flex justify-content-center'>
+						<div class='banner_heading'>
+							<h2 class="fs-2 fw-bold text-white">Contact Us</h2>
+							<p class='text-white fs-6 fw-bold'>Explore. Discuss. Enjoy.</p>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/">Home</a></li>
+									<li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/contact">Contact Us</a></li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+	<div class="container">
+		<h2 class="text-center mt-5 fw-bold shadow p-3">Contact us anytime.</h2>
+		<div class="innerwrap">
+		
+			<section class="section2 clearfix" >
+				<div class="col2 column1 first">
+					<h2 style="margin-top: 50px;" class="animation">Get in touch</h2><br><br>
+					<iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120638.06823396997!2d74.6602714476838!3d19.110304069829184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb05d46788921%3A0x6677e92c1a5181b6!2sAhmednagar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1719579656165!5m2!1sen!2sin" width="500px" height="500" style="border:0;height: 500px; width: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					
+				</div>
+				<div class="col2 column2 last">
+					<div class="sec2innercont">
+						<div class="sec2addr" style="margin-top: 50px;">
+							<h3><%=contact_address.company_name%></h3><br>
+							<p class="fw-bold"><%=contact_address.contact_address%>
+								%></p>
+							<p class="fw-bold"><%=contact_address.pincode%>
+								%></p>
+							<p class="fw-bold"><span class="collig">Phone :</span> +91 <%=contact_address.contact_mobile%>
+								%></p>
+						</div>
+					</div>
+					<form action="/save_contact_info" method="post">
+						<div class="sec2contactform">
+							<h2 class="sec2frmtitle">Reach out, we're here.</h2>
+							<form  action="">
+								<div class="clearfix">
+									<input class="col2 first form-control"  style="background-color: #fae7c4;" type="text" name="contact_fname"   placeholder="FirstName">
+									<input class="col2 last" style="background-color: #fae7c4;" type="text" name="contact_lname" placeholder="LastName">
+								</div>
+								<div class="clearfix">
+									<input  class="col2 first" style="background-color:#fae7c4;" type="Email" name="conatct_email" placeholder="Email">
+									<input class="col2 last" style="background-color: #fae7c4;" type="text" name="contact_mobile" placeholder="Contact Number">
+								</div>
+								<div class="clearfix">
+									<textarea  style="background-color: #fae7c4;"  cols="30" name="contact_message" rows="7" placeholder="Enter Your message"></textarea>
+								</div>
+								<div class="clearfix text-end" ><input type="submit" value="Send" class="btn fw-bold"></div>
+							</form>
+						</div>
+					</form>
+				</div>
+			</section>
+		
+		</div>
+	</div>
+<%- include("footer.ejs") %>

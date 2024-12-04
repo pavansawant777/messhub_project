@@ -1,0 +1,51 @@
+<%- include("Navbar.ejs") %>
+<form action="/admin/save_contact_address" method="post">
+    <div class="container bg-white border shadow p-3">
+        <div class="row">
+            <div class="col-md-12 mt-3 mb-3">
+                <h1 class="heading">Conatct Address</h1>
+            </div>
+            <div class="col-md-4 mt-3 mb-3">
+                <h4>Company Name</h4>
+                <input type="text" name="company_name" class="form-control" >
+            </div>
+            <div class="col-md-4 mt-3 mb-3">
+                <h4>Address</h4>
+                <textarea type="text" name="contact_address" class="form-control" rows="1"></textarea>
+            </div>
+            <div class="col-md-2 mt-3 mb-3">
+                <h4>PinCode </h4>
+                <input type="number" name="pincode" class="form-control">
+            </div>
+            <div class="col-md-2 mt-3 mb-3">
+                <h4>Contact No.</h4>
+                <input type="number" name="contact_mobile" class="form-control">
+            </div>
+            <div class="col-md-12 mt-3 mb-4 text-center ">
+                <button class="btn btn-primary">Save Address</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="container p-3 bg-white border shadow mt-5 text-center">
+    <div class="row">
+        <div class="col-md-12 mt-2 mb-3">
+            <table class=" table">
+                <tr>
+                    <th>Company Name</th>
+                    <th>Address </th>
+                    <th>PinCode </th>
+                    <th>Mobile </th>
+                </tr>
+                <tr>
+                    <td><%=contact_address.company_name%></td>
+                    <td><%=contact_address.contact_address%></td>
+                    <td><%=contact_address.pincode%></td>
+                    <td><%=contact_address.contact_mobile%></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,35 @@
+<%-include('navbar.ejs')%>
+
+<form action="/admin/save_home_about3" method="post" enctype="multipart/form-data">
+    <div class="container bg-light fw-bold shadow">
+        <div class="row">
+            <input type="hidden" name="about3_id" value="<%=about3.about3_id%>">
+            <div class="col-md-12">
+                <h3 class="heading mb-3">Manage Our Vision</h3>
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Vision Heading</label>
+                <input type="text" name="about3_heading" class="form-control" value="<%=about3.about3_heading%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Vision Description</label>
+                <input type="text" name="about3_description" class="form-control" value="<%=about3.about3_description%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Vision Image</label>
+                <input type="file" name="about3_image" class="form-control" required value="<%=about3.about3_image%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <img src="/uploads/aboutus/<%=about3.about3_image%>" style="width: 100px; height: 100px;">
+            </div>
+        
+        </div>
+        <div class="col-md-12 mt-2 mb-2 text-center">
+            <button class="btn text-white bg-primary p-2 mt-2 mb-2">Update Our Vision</button>
+        </div>
+
+        </div>
+    </div>
+</form>
+
+<%-include('footer.ejs')%>

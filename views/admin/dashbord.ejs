@@ -1,0 +1,124 @@
+<%-include('navbar.ejs')%>
+
+    <style>
+        .centers {
+            display: grid;
+            align-items: center;
+            text-align: left;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <div class="container bg-white pt-3">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <h3 class="heading mb-4">Welcome Dashboard</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-white pt-1 pb-5">
+        <div class="row">
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/mace_approvel_pending" style="text-decoration: none;">
+                    <div class="centers" style="height: 100px;width: 300px;background-color: #a38cc6;">
+                        <div>
+                            <% for(var i=0;i<user_admin_kyc_data.length;i++) { %>
+                                <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;">
+                                    <%=user_admin_kyc_data[i].user_admin_kyc_count%>
+                                </span>
+                                <% } %><br>
+                                    <span style="font-size: 17px;color: white;font-family: sans-serif;">User Kyc
+                                        Pending</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/mace_approvel_complated" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #2196f3;">
+                    <div>
+                        <% for(var i=0;i<user_admin_kyc_complated_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=user_admin_kyc_complated_data[i].user_admin_kyc_complated_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">User Kyc Appproval </span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/contact_list" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #ffc241;">
+                    <div>
+                        <% for(var i=0;i<conact_info_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=conact_info_data[i].conact_info_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">User Contact</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+    
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/mess_services" style="text-decoration: none;">
+    
+                <div class="centers" style="height: 100px;width: 300px;background-color: #1dc9b7;">
+                    <div>
+                        <% for(var i=0;i<mess_service_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_service_data[i].mess_service_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">All Mess Service</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/blog" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #6ab8f7;">
+                    <div>
+                        <% for(var i=0;i<mess_blogs_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_blogs_data[i].mess_blogs_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">All Mess Blog</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/menu_lunch" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #fe6bb0;">
+                    <div>
+                        <% for(var i=0;i<menu_lunch_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=menu_lunch_data[i].menu_lunch_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Lunch Menu</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-3  " style="margin-top: 12px;">
+                <a href="/admin/menu_dinner" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #f679eb;">
+                    <div>
+                        <% for(var i=0;i<menu_dinner_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=menu_dinner_data[i].menu_dinner_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Dinner Menu</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <%-include('footer.ejs')%>

@@ -1,0 +1,43 @@
+<%- include('Navbar.ejs') %>
+
+
+<section>
+    <div class='Banner overflow-hidden col-md-12 col-sm-12 col-xs-12' style="background-image: url('https://greensoulkitchens.in/wp-content/uploads/2022/12/Mask-group-2.jpg'); background-repeat: no-repeat;background-size: cover;">
+        <div class='container'>
+            <div class='row d-flex justify-content-center'>
+                <div class='banner_heading'>
+                    <h2 class="fs-2 fw-bold text-white">Login</h2>
+                    <p class='text-white fs-6 fw-bold'>Explore. Discuss. Enjoy.</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/">Home</a></li>
+                            <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/contact">Contact Us</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<form action="/do_login" method="post">
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-5 mt-5">
+            <div class="col-md-5 bg-white shadow p-5">
+                <h3 class="text-center">Login Now</h3><br>
+                Enter Mobile No 
+                <input type="text" name="mobile_number" class="form-control"><br>
+                Enter Password 
+                <input type="password" name="password" class="form-control"><br>
+                <div class="text-center">
+                    <button class="btn mb-4 text-white pl-4 pr-4" style="background-color: rgb(233, 96, 33);">Login</button><br>
+                    <h6>New User <a href="/signup">Create Account</a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<%- include('Footer.ejs') %>

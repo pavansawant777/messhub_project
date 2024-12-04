@@ -1,0 +1,35 @@
+<%-include('navbar.ejs')%>
+
+<div class="container-fluid p-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+          <h3 class="heading page-header mb-4">
+              <span class="background_overlp" >Menu Banner Update For Lunch</span>
+          </h3>
+      </div>
+  </div>
+  
+<form action="/admin/save_banner3" class="border p-4" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-3">
+            <label for="" class="mb-2 mt-3">Enter Danner Heading</label>
+            <input type="file" name="banner_image" value="<%=banner_edit_info.banner_image%>" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <img src="/uploads/<%=banner_edit_info.banner_image%>" width="200px" height="100px" >
+        </div>
+        <div class="col-md-6">
+            <label for="" class="mb-2 mt-3">Enter Danner Heading</label>
+            <input type="text" name="banner_heading" value="<%=banner_edit_info.banner_heading%>" class="form-control">
+        </div>
+        <div class="col-md-12">
+            <label for="" class="mb-2 mt-3">Enter Danner Description</label>
+            <input type="text" name="banner_description" value="<%=banner_edit_info.banner_description%>" class="form-control">
+        </div>
+        <div class="col-md-12 text-center mt-4">
+            <button type="submit" class="btn text-white " style="padding-left: 20px;padding-right: 20px;background-color: #5D5493;">Update Banner</button>    
+        </div>
+    </div>
+</form>
+
+<%-include('footer.ejs')%>

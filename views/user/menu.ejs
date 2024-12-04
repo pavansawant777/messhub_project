@@ -1,0 +1,119 @@
+<%-include("navbar.ejs") %>
+    <section class='Main_Menu'>
+
+        <div class='Banner overflow-hidden col-md-12 col-sm-12 col-xs-12 col-12' style="background-image: url('/uploads/<%=banner_edit_info.banner_image%>'); background-repeat: no-repeat;background-size: cover;">
+            <div class='container'>
+                <div class='row d-flex justify-content-center'>
+                    <div class='banner_heading '>
+                        <h2 class="fs-2 fw-bold text-white"><%=banner_edit_info.banner_heading%></h2>
+                        <p class='text-white fs-6 fw-bold'><%=banner_edit_info.banner_description%></p>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/">Home</a></li>
+                                <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/contact">Contact Us</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12 text-center mb-5">
+                    <h2>Mess's Menu Choose Your Meal</h2>
+                </div>
+            </div>
+
+            <% for(var i=0;i<menu_meal_lunch.length;i++) { %>
+                
+            <div class="row mt-5 mb-5">
+                <div class="col-md-12 text-center ">
+                    <h4>
+                        <%=menu_meal_lunch[i].user_admin_fname%>
+                        <%=menu_meal_lunch[i].user_admin_lname%>
+                    </h4>
+                    <div class="centers">
+                        <div style="height: 3px;width: 220px;background-color: red;"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <img src="/uploads/<%=menu_meal_lunch[i].mess_images%>"
+                        style="box-shadow: 0px 0px 20px rgb(69, 45, 45);border-radius: 10px;" height="400px"
+                        width="100%">
+                    <h2 class="mt-3 mb-3"><%=menu_meal_lunch[i].user_admin_mess_name%></h2>
+                    <div style="height: 5px;width: 100px;background-color: red;"></div>
+                    <div class="">
+                        <p class="mt-3 mb-3" style="text-align: justify;">
+                            <i class="fa fa-map-marker mr-2"></i> <%=menu_meal_lunch[i].user_admin_mess_area%> , Ahmednagar<br><br>
+                            <%=menu_meal_lunch[i].mess_discription%>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-5 ">
+                    <table class="table table-bordered  centers p-5 back_shadow_css"
+                        style="border: 2px solid rgb(151, 85, 85);">
+                        <tr>
+                            <th class="borders_css">Days</th>
+                            <th class="borders_css">Menu Name</th>
+                            <th class="borders_css">Menu Image</th>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Sunday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_sunday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_sunday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Monday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_monday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_monday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Tuesday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_tuesday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_tuesday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Wednesday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_wednesday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_wednesday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Thursday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_thursday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_thursday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Friday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_friday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_friday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                        <tr class="table_hover_css">
+                            <td class="borders_css1 bg-color_css">Saturday</td>
+                            <td class="borders_css1"><%=menu_meal_lunch[i].mess_saturday_meal_name%></td>
+                            <td class="borders_css1">
+                                <img src="/uploads/<%=menu_meal_lunch[i].mess_saturday_meal_img%>" height="70px" width="100%">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <%}%>
+        </div>
+
+    </section>
+
+    <%-include("Footer.ejs") %>

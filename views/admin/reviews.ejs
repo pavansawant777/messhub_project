@@ -1,0 +1,62 @@
+<%-include('navbar.ejs')%>
+
+<form action="/admin/save_reviews" method="post" enctype="multipart/form-data">
+    <div class="container bg-light fw-bold shadow">
+        <div class="row">  
+            <div class="col-md-12">
+                <h3 class="heading mb-3">Customer Reviews</h3>
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Customer Reviewers Name</label>
+                <input type="text" name="reviewer_name" class="form-control">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Customer Review Description</label>
+                <input type="text" name="review_desc" class="form-control">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Customer Reviewers Image</label>
+                <input type="file" name="reviewer_img" class="form-control" required>
+            </div>
+        </div>
+        <div class="col-md-12 mt-2 mb-2 text-center">
+            <button class="btn text-white bg-primary p-2 mt-2 mb-2">Save Review</button>
+        </div>
+    </div>
+</form>
+
+<!-- Table -->
+ <div class="container bg-light fw-bold shadow mt-2 p-2">
+    <div class="row p-2 pb-2">
+        <div class="col-md-12 mb-2">
+            <h3 class="subheading mb-2"> Reviews List </h3>
+        </div>
+        <div class="col-md-12 mb-2">
+            <table class="table table-bordered table-striped shadow">
+                <tr>
+                    <th>ACTION</th>
+                    <th>SN</th>
+                    <th>REVIEWER NAME</th>
+                    <th>REVIEW DESCRIPTION</th>
+                    <th>REVIEWER IMAGE</th>
+                </tr>
+                <% for(var i=0; i<reviews_list.length; i++){ %>
+                    <tr>
+                        <td style="width: 3%; white-space: nowrap;">
+                            <a href="/admin/edit_reviews/<%=reviews_list[i].review_id%>"><button class="bg-info"><i class="fa fa-edit text-white"></i></button></a>
+                            <a href="/admin/delete_reviews/<%=reviews_list[i].review_id%>" onclick="return confirm('ARE YOU SURE...?')"><button class="bg-danger"><i class="fa fa-trash text-white"></i></button></a>
+                        </td>
+                        <td><%=i+1%></td>
+                        <td><%=reviews_list[i].reviewer_name%></td>
+                        <td><%=reviews_list[i].review_desc%></td>
+                        <td>
+                            <img src="/uploads/home/<%=reviews_list[i].reviewer_img%>" width="50px" height="50px">
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+    </div>
+ </div>
+
+<%-include('footer.ejs')%>

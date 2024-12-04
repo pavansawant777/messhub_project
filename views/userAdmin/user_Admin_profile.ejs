@@ -1,0 +1,129 @@
+<%- include('navbar.ejs') %>
+
+
+<div class="container-fluid">
+  </div>
+    <div class="row">
+
+      <div class="col-md-6 p-2 ">
+        <div id="c_1" class="card border shadow-0 mb-g shadow-sm-hover" data-filter-tags="oliver kopyov">
+          <div class="card-body border border-faded border-top-0 border-left-0 border-right-0 rounded-top">
+            
+            <% for(var i=0;i<user_kyc_data.length;i++) { %>
+                <div class="">
+                        <div class="row ">
+                            <div class="col-md-2 ">
+                                <span class="rounded-circle text-center profile-image d-block " >
+                                    <a href="" class="">
+                                        <img src="/uploads/<%=user_kyc_data[i].user_admin_photo%>" class="rounded-circle" height="80px"  width="80px"/>
+                                    </a>
+                                </span> 
+                            </div>
+                            <div class="col-md-7 centers ">
+                                <div class="info-card-text flex-1">
+                                    <a href="javascript:void(0);" class="fs-xl text-truncate text-truncate-lg " style="color: #525187" data-toggle="dropdown" aria-expanded="false">
+                                        <td><%=user_kyc_data[i].user_admin_fname%></td>
+                                        <td><%=user_kyc_data[i].user_admin_lname%></td>                                                 
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 centers">
+                                <a href="/userAdmin/edit_user_admin_profile/<%=user_kyc_data[i].user_admin_kyc_id%>" class="">
+                                    <button class="btn d-md-block d-none text-white" style="background-color: #525187">
+                                        Edit Profile
+                                    </button>
+                                    <button class="btn d-md-none text-white btn-sm d-block " style="background-color: #525187" >
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+           
+  
+                </div>
+                    <div class="card-body p-0 collapse show">
+                        <div class="p-3">
+                            <a href="" class="mt-1 d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-phone text-muted mr-2"></i>+91 <td><%=user_kyc_data[i].user_admin_phone%></td>
+                            </a>
+                            <a href="" class="mt-1 d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-envelope text-muted mr-2"></i><td><%=user_kyc_data[i].user_admin_email%></td>
+                            </a>
+                            <address class="fs-sm fw-400 mt-4 text-muted">
+                                <i class="fa fa-map-pin mr-2"></i>
+                                <td><%=user_kyc_data[i].user_admin_address%></td>
+                            </address>
+                            <div class="d-flex flex-row">
+                                <a target="_blank" href="" class="mr-2 fs-xxl" style="color:#3b5998">
+                                    <i class="fa fa-facebook-square" style="font-size: 30px;"></i>
+                                </a>
+                                <a target="_blank" href="" class="mr-2 fs-xxl" style="color:#38A1F3">
+                                    <i class="fa fa-twitter-square" style="font-size: 30px;"></i>
+                                </a>
+                                <a target="_blank" href="" class="mr-2 fs-xxl" style="color:#0077B5">
+                                    <i class="fa fa-linkedin" style="font-size: 30px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+      </div>
+
+      <div class="col-md-6 p-2 ">
+        <div id="c_1" class="card border shadow-0 mb-g shadow-sm-hover" data-filter-tags="oliver kopyov">
+          <div class="card-body border border-faded border-top-0 border-left-0 border-right-0 rounded-top">
+            
+            <% for(var i=0;i<user_kyc_data.length;i++) { %>
+                <div class="">
+                        <div class="row ">
+                            <div class="col-md-12 centers">
+                                <h5>KYC Details</h5>
+                            </div>
+                        </div>
+                </div>  
+                </div>
+                    <div class="card-body p-0 collapse show">
+                        
+                        <div class="p-3">
+                            
+                            <a href="" class="mt-1 d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-user text-muted mr-2"></i>
+                                <%=user_kyc_data[i].user_admin_fname%>
+                                    <%=user_kyc_data[i].user_admin_lname%>  
+                            </a>
+                            <a href="" class="mt-1 d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-phone text-muted mr-2"></i>+91 <td><%=user_kyc_data[i].user_admin_phone%></td>
+                            </a>
+                            <a href="" class="mt-1  d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-envelope text-muted mr-2"></i><td><%=user_kyc_data[i].user_admin_email%></td>
+                            </a>
+                            <a href="" class="mt-1  d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-envelope text-muted mr-2"></i><td><%=user_kyc_data[i].user_admin_address%></td>
+                            </a>
+
+                            <address class="fs-sm fw-400 mt-4 text-muted">
+                                <i class="fa fa-map-pin mr-2"></i>
+                                <td><%=user_kyc_data[i].user_admin_mess_area%></td>
+                            </address>
+                            <a href="" class="mt-1 d-block fs-sm fw-400 text-dark">
+                                <i class="fa fa-cutlery text-muted mr-2"></i>
+                                <td><%=user_kyc_data[i].user_admin_mess_name%></td>
+                            </a>
+
+                            <a href="" class="mt-4 d-block  fs-sm fw-400 text-dark">
+                                <img src="/uploads/<%=user_kyc_data[i].user_admin_mess_photo%>" class="rounded" width="100%"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+      </div>
+
+    </div>
+  </div>
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,49 @@
+<%- include("Navbar.ejs") %>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<div class="container p-3 border shadow bg-white">
+    <div class="row">
+        <div class="col-md-12 mt-3 mb-3">
+            <h3 class="heading">Conatct list</h3>
+        </div>
+        <di class="col-md-12 mt-3 mb-3">
+            <table class="table ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Action</th>
+                        <th>Sr.No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Message</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0;i<info.length;i++){%>
+                    <tr>
+                        <td>
+                            <a href="/admin/delete_contact_info/<%=info[i].conact_info_id%>" onclick="return confirm('Are You Sure...?')">
+                                <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                            </a>
+                        </td>
+                        <td><%=i+1%></td>
+                        <td><%=info[i].contact_fname%></td>
+                        <td><%=info[i].contact_lname%></td>
+                        <td><%=info[i].conatct_email%></td>
+                        <td><%=info[i].contact_mobile%></td>
+                        <td><%=info[i].contact_message%></td>
+                        <td ><%=info[i].contact_date%></td>
+                        <td><%=info[i].contact_time%></td>
+                    </tr>
+                    <%} %>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<%- include("footer.ejs") %>

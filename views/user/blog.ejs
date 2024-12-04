@@ -1,0 +1,62 @@
+<%- include("navbar.ejs") %>
+    <link rel="stylesheet" href="style.css">
+
+    <section>
+        <div class='Banner overflow-hidden col-md-12 col-sm-12 col-xs-12 col-12'
+            style="background-image: url('/uploads/<%=banner_edit_info1.banner_image%>'); background-repeat: no-repeat;background-size: cover;">
+            <div class='container'>
+                <div class='row d-flex justify-content-center'>
+                    <div class='banner_heading '>
+                        <h2 class="fs-2 fw-bold text-white">
+                            <%=banner_edit_info1.banner_heading%>
+                        </h2>
+                        <p class='text-white fs-6 fw-bold'>
+                            <%=banner_edit_info1.banner_description%>
+                        </p>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold"
+                                        href="/">Home</a></li>
+                                <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold"
+                                        href="/contact">Contact Us</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <div class="row">
+            
+            <% for(var i=0;i<mess_blog_data.length;i++) { %>
+                <div class='col-md-4 col-sm-12 col-12'>
+                    <div class="card shadow col-md-12 col-12 p-3 mb-5 bg-body-tertiary rounded" style=" border: none ">
+                        <img src="/uploads/<%=mess_blog_data[i].mess_blog_images%>" height="200px" class="card-img-top  " alt="" />
+                        <div class="text-center">
+                            <h6 class='text-secondary mt-4'>BLOG  <span style="font-weight: bold;">(  <%=mess_blog_data[i].user_name%> Mess ) </span></h6>
+                        </div>
+                        <div class="">
+                            <div style="height:3px;width:290px;background:red"></div>
+                        </div>
+
+                        <div class="card-title mt-3">
+                            <h5 class=""><%=mess_blog_data[i].mess_blog_heading%></h5>
+
+                            <p class="card-description  text-secondary mb-1">
+                                <%=mess_blog_data[i].mess_blog_description%>
+                            </p>
+                        </div>
+
+                        <div class="card-footer mt-5" style=" border: none ">
+                            <!-- <div class="text-danger fw-bold">Read More </div> -->
+                            <button class="btn text-danger fw-bold">Read More</button>
+                        </div>
+
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <%- include("footer.ejs") %>

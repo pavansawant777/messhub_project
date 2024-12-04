@@ -1,0 +1,28 @@
+<%-include('navbar.ejs')%>
+
+<form action="/admin/save_home2_bg" method="post" enctype="multipart/form-data">
+    <div class="container bg-light fw-bold shadow">
+        <div class="row">
+            <input type="hidden" name="home2_id" value="<%=home2_bg.home2_id%>">
+            <div class="col-md-12">
+                <h3 class="heading mb-3">Customer Review</h3>
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Customer Review Heading</label>
+                <input type="text" name="home2_heading" class="form-control" value="<%=home2_bg.home2_heading%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Customer Review BG Image</label>
+                <input type="file" name="home2_image" class="form-control" required value="<%=home2_bg.home2_image%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <img src="/uploads/home/<%=home2_bg.home2_image%>" style="width: 100px; height: 100px;">
+            </div>
+        </div>
+        <div class="col-md-12 mt-2 mb-2 text-center">
+            <button class="btn text-white bg-primary p-2 mt-2 mb-2">Update Customer Review</button>
+        </div>
+    </div>
+</form>
+
+<%-include('footer.ejs')%>

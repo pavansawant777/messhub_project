@@ -1,0 +1,112 @@
+<%- include("Navbar.ejs")%>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<form class="pt-5 bg-white" action="/userAdmin/mess_service_save" method="post" enctype="multipart/form-data">
+    <div class="container  ">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Mess Service</span>
+            </h3>
+        </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Enter the Mess Your No = 
+            <% for(var i=0;i<user_kyc_profile_data_complated.length;i++) { %>
+              <%=user_kyc_profile_data_complated[i].user_admin_kyc_id%>
+            <% } %>  
+          </label>
+          <input type="text" class="form-control" id="" name="user_admin_kyc_id" placeholder="Enter Mess No">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="image">Service Image</label>
+          <input type="file" class="form-control" id="file" name="service_mess_image" placeholder="Enter Service Image">
+        </div>
+      </div>
+
+    </div>
+
+      <div class="row">
+        
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phone">Service Mess Title </label>
+            <input type="text" class="form-control" id="phone" name="service_mess_title" placeholder="Enter Service Mess Title">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="address">Service Mess description</label>
+            <input type="text" class="form-control" id="address" name="service_mess_description" placeholder="Enter Service Mess description">
+          </div>
+        </div>
+
+
+      </div>
+      
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+  <br><br>
+
+
+  <div class="container-fluid p-5 bg-white">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Mess Service</span>
+            </h3>
+        </div>
+  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>Service Mess Title </td>
+            <td>Service Mess Decription</td>
+            <td>Service Mess Images</td>
+          </tr>
+          <% for(var i=0;i<mess_service_data.length;i++) { %>
+            <tr>
+              <td>
+                <a style="text-decoration: none;" class="bg-white" href="/userAdmin/edit_mess_service_data/<%=mess_service_data[i].mess_service_id%>"> 
+                  <button style="border: 2px solid rgb(62, 96, 190);border-radius: 3px;" class="btn bg-white pl-2 pr-1 pt-2 pb-2"> <i class="fa fa-edit" style="color: rgb(62, 96, 190);"></i> </button> 
+                </a>
+                <a style="text-decoration: none;" class="bg-white" href="/userAdmin/delete_mess_service_data/<%=mess_service_data[i].mess_service_id%>"> 
+                  <button style="border: 2px solid red;border-radius: 3px;" class="btn bg-white pl-2 pr-1 pt-2 pb-2"> 
+                    <i class="fa fa-trash-o text-danger" aria-hidden="true"></i>
+                  </button> 
+                </a>
+              </td> 
+            
+                <td><%=mess_service_data[i].service_mess_title%></td>
+                <td><%=mess_service_data[i].service_mess_description%></td>
+                <td>
+                  <img src="/uploads/<%=mess_service_data[i].service_mess_image%>" width="100px"/>
+                </td>
+            </tr>
+        <% } %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<%- include("Footer.ejs")%>

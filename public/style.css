@@ -1,0 +1,650 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+.yedanavbar_css{
+    margin-left: 0px;
+    margin-right: 460px;
+}
+/* Contact Form Styling */
+.container {
+    padding: 0 50px 70px;
+}
+.textcenter {
+    text-align: center;
+}
+.section1 {
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+.section1 .shtext {
+    display: block;
+    margin-top: 20px;
+}
+.section1 .seperator {
+    border-bottom:1px solid #a2a2a2;
+    width: 35px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.section1 h1 {
+    font-size: 40px;
+    color: #A44DD8;
+    font-weight: normal;
+}
+
+.section2 {
+    width: 100%;
+    margin: auto;
+}
+.section2 .col2 {
+    width: 48.71%;
+}
+.section2 .col2.first {
+    float: left;
+}
+.section2 .col2.last {
+    float: right;
+}
+.section2 .col2.column2 {
+    padding: 0 30px;
+}
+.section2 span.collig {
+    color: #a2a2a2;
+    margin-right: 10px;
+    display: inline-block;
+}
+.section2 .sec2addr {
+    display: block;
+    line-height: 26px;
+}
+.section2 .sec2addr p:first-child {
+    margin-bottom: 10px;
+}
+.section2 .sec2contactform input[type="text"], 
+.section2 .sec2contactform input[type="email"],
+.section2 .sec2contactform textarea {
+    padding: 18px;
+    border: 0;
+    background: #EDEDED;
+    margin: 7px 0;
+}
+.section2 .sec2contactform textarea {
+    width: 100%;
+    display: block;
+    color: #666;
+  resize:none;
+}
+.section2 .sec2contactform input[type="submit"] {
+    padding: 15px 40px;
+    color: #fff;
+    border: 0;
+    background: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 7px 0;
+    cursor: pointer;
+}
+.section2 .sec2contactform h3 {
+    font-weight: normal;
+    margin: 20px 0;
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 19px;
+    color:#000000;
+}
+
+/* @media querries */
+
+@media only screen and (max-width: 1266px) {
+    .section2 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .container {
+        padding: 0 30px 70px;
+    }
+    .section2 .col2 {
+        width: 100%;
+        display: block;
+    }
+    .section2 .col2.first {
+        margin-bottom: 10px;
+    }
+    .section2 .col2.column2 {
+        padding: 0;
+    }
+    body .sec2map {
+        height: 250px !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .section2 .sec2addr {
+        font-size: 14px;
+    }
+    .section2 .sec2contactform h3 {
+        font-size: 16px;
+    }
+    .section2 .sec2contactform input[type="text"], .section2 .sec2contactform input[type="email"], .section2 .sec2contactform textarea {
+        padding: 10px;
+        margin:3px 0;
+    }
+    .section2 .sec2contactform input[type="submit"] {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    .yedanavbar_css{
+        margin-left: 0px;
+        margin-right: 120px;
+    }
+  
+    
+}
+.breadcrumb {
+    display: none !important;
+}
+@media only screen and (max-width: 420px) {
+    .section1 h1 {
+        font-size: 28px;
+    }   
+}
+.sec2innercont{
+    animation: fadeInRight 2s ease;
+}
+.sec2contactform{
+    animation: fadeInRight 2s ease;
+}
+.animation{
+     animation: fadeInUp 2s ease;
+}
+.google_map{
+    animation: fadeInUp 2s ease;
+}
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.tiffin_img{
+	height: 500px;
+	width: 100%;
+	background-image: url(https://greensoulkitchens.in/wp-content/uploads/2023/01/innerbanner-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    padding: 20px;
+    opacity: 1.0px;
+}
+.col-6{
+	font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+.home_delivery{
+    animation: fadeInRight 2s ease;
+}
+.service_img{
+    animation: fadeInUp 2s ease;
+}
+*{
+    margin:opx;
+    padding:opx;
+}
+.table{
+   
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 15px;
+    vertical-align: top;
+    font-size: 13px !important;
+    margin-bottom: 15px;
+}
+.menu{
+        height: auto;
+        width: 100%;
+        float: left;
+        background-color: hsl(0,80%,0%,0.8);
+       
+    }    
+
+
+    .blog-bg-2{
+        background-image: url(https://greensoulkitchens.in/wp-content/uploads/2023/01/innerbanner-1.jpg);
+        width: 100%;
+        background-size: 100% 100%;
+        height: 400px;
+        position: relative;
+    }
+    
+
+
+
+    .tiffin_img{
+        height: 500px;
+        width: 100%;
+        background-image: url(https://greensoulkitchens.in/wp-content/uploads/2023/01/innerbanner-1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /*background-attachment: fixed;*/
+        padding: 20px;
+        opacity: 1.0px;
+    }
+    .col-6{
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+    .home_delivery{
+        animation: fadeInRight 2s ease;
+    }
+    .service_img{
+        animation: fadeInUp 2s ease;
+    }
+    @keyframes fadeInUp {
+        0%{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadeInRight {
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+    
+    .clearfix:before, .clearfix:after { display: table; content: '';}
+    .clearfix:after { clear: both;}
+    
+    
+    body {
+        background: #ffffff;
+        color: #333;
+        font-weight: normal;
+        font-size: 1em;
+        font-family: 'Roboto', Arial, sans-serif;
+    }
+    
+    input:focus, textarea:focus, keygen:focus, select:focus {
+        outline: none;
+    }
+    ::-moz-placeholder {
+        color: #666;
+        font-weight: 300;
+        opacity: 1;
+    }
+    
+    ::-webkit-input-placeholder {
+        color: #666;
+        font-weight: 300;
+    }
+    
+    
+    /* Contact Form Styling */
+    .container {
+        padding: 0 50px 70px;
+    }
+    .textcenter {
+        text-align: center;
+    }
+    .section1 {
+        text-align: center;
+        display: table;
+        width: 100%;
+    }
+    .section1 .shtext {
+        display: block;
+        margin-top: 20px;
+    }
+    .section1 .seperator {
+        border-bottom:1px solid #a2a2a2;
+        width: 35px;
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    .section1 h1 {
+        font-size: 40px;
+        color: #A44DD8;
+        font-weight: normal;
+    }
+    
+    .section2 {
+        width: 1200px;
+        margin: 25px auto;
+    }
+    .section2 .col2 {
+        width: 48.71%;
+    }
+    .section2 .col2.first {
+        float: left;
+    }
+    .section2 .col2.last {
+        float: right;
+    }
+    .section2 .col2.column2 {
+        padding: 0 30px;
+    }
+    .section2 span.collig {
+        color: #a2a2a2;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .section2 .sec2addr {
+        display: block;
+        line-height: 26px;
+    }
+    .section2 .sec2addr p:first-child {
+        margin-bottom: 10px;
+    }
+    .section2 .sec2contactform input[type="text"], 
+    .section2 .sec2contactform input[type="email"],
+    .section2 .sec2contactform textarea {
+        padding: 18px;
+        border: 0;
+        background: #EDEDED;
+        margin: 7px 0;
+    }
+    .section2 .sec2contactform textarea {
+        width: 100%;
+        display: block;
+        color: #666;
+      resize:none;
+    }
+    .section2 .sec2contactform input[type="submit"] {
+        padding: 15px 40px;
+        color: #fff;
+        border: 0;
+        background: #000000;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 7px 0;
+        cursor: pointer;
+    }
+    .section2 .sec2contactform h3 {
+        font-weight: normal;
+        margin: 20px 0;
+        margin-top: 30px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 19px;
+        color:#000000;
+    }
+    
+    /* @media querries */
+    
+    @media only screen and (max-width: 1266px) {
+        .section2 {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 960px) {
+        .container {
+            padding: 0 30px 70px;
+        }
+        .section2 .col2 {
+            width: 100%;
+            display: block;
+        }
+        .section2 .col2.first {
+            margin-bottom: 10px;
+        }
+        .section2 .col2.column2 {
+            padding: 0;
+        }
+        body .sec2map {
+            height: 250px !important;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .section2 .sec2addr {
+            font-size: 14px;
+        }
+        .section2 .sec2contactform h3 {
+            font-size: 16px;
+        }
+        .section2 .sec2contactform input[type="text"], .section2 .sec2contactform input[type="email"], .section2 .sec2contactform textarea {
+            padding: 10px;
+            margin:3px 0;
+        }
+        .section2 .sec2contactform input[type="submit"] {
+            padding: 10px 30px;
+            font-size: 14px;
+        }
+    }
+    @media only screen and (max-width: 420px) {
+        .section1 h1 {
+            font-size: 28px;
+        }   
+    }
+    .sec2innercont{
+        animation: fadeInRight 5s ease;
+    }
+    .sec2contactform{
+        animation: fadeInRight 5s ease;
+    }
+    .animation{
+         animation: fadeInUp 5s ease;
+    }
+    .google_map{
+        animation: fadeInUp 5s ease;
+    }
+    @keyframes fadeInUp {
+        0%{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadeInRight {
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+
+    
+    
+    
+
+
+  
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after { display: table; content: '';}
+.clearfix:after { clear: both;}
+
+
+body {
+    background: #ffffff;
+    color: #333;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+    outline: none;
+}
+::-moz-placeholder {
+    color: #666;
+    font-weight: 300;
+    opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #666;
+    font-weight: 300;
+}
+
+
+
+
+
+.centers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back_img_css{
+    position:absolute;
+    z-index: 999999999999;
+    top: 0px;
+}
+/* .navbar_css {
+    position: relative !important;
+    z-index: 99999999 !important;
+} */
+.image_css{
+    height:480px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.9; */
+}
+
+.private_images{
+    overflow: hidden;
+  }
+  .image_scale:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+  /* Banner started */
+  .Banner{
+    width: 100%;
+    height: 60vh;
+  }
+ .banner_heading{
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+  }
+.banner_heading h2{
+    font-size: 30vh;
+    text-shadow: 2px 2px black;
+  }
+.banner_heading li a{
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+
+  /* Menu */
+  .Main_Menu .card img{
+    width: 100%;
+    height: 30vh;
+  }
+  .Main_Menu .card h5{
+    font-size: 1.5rem;
+    text-shadow: 1px 1px grey;
+  }
+  
+
+  .login_btn {
+    border: 2px solid orange;
+    border-radius: 10px;
+  }
+  
+  .centers1{
+    display: grid;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+  }
+
+  .borders_css {
+    border: 2px solid black !important;
+    background-color: rgb(170, 226, 93) !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding: 20px !important;
+  }
+
+  .borders_css1 {
+    border: 2px solid green !important;
+    font-size: 16px;
+  }
+
+  .table_hover_css {
+    background-color: white !important;
+  }
+
+  .table_hover_css:hover{
+    background-color: rgb(247, 244, 244) !important;
+    box-sizing: border-box;
+  }
+
+  .bg-color_css {
+    color: red !important;
+    font-weight: bold !important;
+    font-family: sans-serif;
+  }
+
+  .back_shadow_css {
+    background-color:rgb(252, 246, 246) ;
+    box-shadow: 10px 10px 20px rgb(227, 225, 225);
+  }
+
+
+

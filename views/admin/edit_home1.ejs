@@ -1,0 +1,35 @@
+<%-include('navbar.ejs')%>
+
+<form action="/admin/update_home1" method="post" enctype="multipart/form-data">
+    <div class="container bg-light fw-bold shadow">
+        <div class="row">
+            <input type="hidden" name="home1_id" value="<%=home1.home1_id%>">
+            <div class="col-md-12">
+                <h3 class="heading mb-3">Manage Our Meal Plans</h3>
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Meal Plans Heading</label>
+                <input type="text" name="home1_heading" class="form-control" value="<%=home1.home1_heading%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Meal Plans Title</label>
+                <input type="text" name="home1_title" class="form-control" value="<%=home1.home1_title%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>Our Meal Plans Image</label>
+                <input type="file" name="home1_image" class="form-control" required value="<%=home1.home1_image%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <img src="/uploads/home/<%=home1.home1_image%>" style="width: 100px; height: 100px;">
+            </div>
+        
+        </div>
+        <div class="col-md-12 mt-2 mb-2 text-center">
+            <button class="btn text-white bg-primary p-2 mt-2 mb-2">Update Our Meal Plans</button>
+        </div>
+
+        </div>
+    </div>
+</form>
+
+<%-include('footer.ejs')%>

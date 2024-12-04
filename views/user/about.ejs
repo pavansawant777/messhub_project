@@ -1,0 +1,108 @@
+<%- include("navbar.ejs") %>
+<div class="backup_css">
+    <div class='Banner overflow-hidden col-md-12 col-sm-12 col-xs-12' style="background-image: url('/uploads/aboutus/<%=aboutus_banner.aboutus_banner_image%>'); background-repeat: no-repeat;background-size: cover;">
+        <div class='container'>
+            <div class='row d-flex justify-content-center '>
+                <div class='banner_heading'>
+                    <h2 class="fs-2 fw-bold text-white"><%=aboutus_banner.aboutus_heading%></h2>
+                        <p class='text-white fs-6 fw-bold '>The Tiffin is about that one time in millions when a box goes astray, changing lives forever.</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb bg-danger">
+                                    <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/">Home</a></li>
+                                    <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/contact">Contact Us</a></li>
+                                </ol>
+                            </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <section class="image_css" style="background-image:url('https://greensoulkitchens.in/wp-content/uploads/2022/12/Mask-group-2.jpg')">
+    <div class="image_css" style="background-color:rgba(0,0,0,0.4)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <h2 class="text-white fs-2 fw-bold animate__animated animate__fadeInDown" style="margin-top:220px;margin-left:260px;font-weight:bold;">About Us</h2>
+                    <p class="animate__animated animate__fadeInUp text-white fs-6 fw-bold" style="margin-top:20px;margin-left:50px;text-align:center;color:white;font-weight:500px">The Tiffin is about that one time in millions when a box goes astray, changing lives forever.</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-danger">
+                            <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/">Home</a></li>
+                            <li class="breadcrumb-item fs-6"><a class="text-decoration-none fw-bold" href="/contact">Contact Us</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section> -->
+</div>
+
+<div class="container">
+     <div class="row pt-5 pb-5">
+        <% for (var i=0; i<about1.length;i++){ %> 
+        <div class="col-md-6">
+        <div class="private_images">
+            <img src="/uploads/aboutus/<%=about1[i].about1_image%>" class="image_scale" style="height:500px;width:100%">
+        </div>
+    </div>         
+    <% }%>
+            <div class="col-md-6 ">
+                <div class="row">
+                    <% for (var i=0; i<about1.length;i++){ %> 
+                    <div class=" ">
+                        <h1 class="text-black animate__animated animate__fadeInDown" style=font-weight:bold><%=about1[i].about1_heading%></h1>
+                        <div class=" ">
+                              <div style=height:2px;width:230px;background:red></div>
+                        </div>
+                        <p style=color:#31674B;margin-top:30px><%=about1[i].about1_description%></p>
+
+                        <!-- <p style=color:#0F4E2C;margin-top:20px>We provide online tiffin service in different areas such as tiffin service in BalikaAashram rod,
+                             tiffin service in All Peth Areas Etc.</p>
+
+                        <p style=color:#0F4E2C;margin-top:10px>Our ace Chef with a robust experience & best Culinary Qualification in providing meals to match the taste buds healthily
+                             without burning a hole in the pocket.</p>
+
+                     <p style=color:#0F4E2C;margin-top:10px>We Cater not only Homes & Offices but also variety of Occasions with our Multi-cuisines options 
+                        to choose from which help us serve you better.</p> -->
+
+                </div>
+                <% }%>   
+         </div>
+        </div>
+        </div>
+  </div>
+
+
+  <div class="centers img-fluid" style=height:720px;width:100%;background-image:url(https://media-cdn.grubhub.com/grubhub-marketing/image/upload/f_auto,fl_lossy/v1692270106/grubhubHomePage/sushi_homepage1.png);background-repeat:no-repeat;background-size:cover>
+ <div class="container ">
+   <div class="row mt-5">
+
+    <div class="col-md-12">
+    <div class="row mt-5">
+        <% for (var i=0; i<about2.length;i++){ %>
+        <div class="col-md-6 canimate__animated animate__fadeInDown">
+            <div style="background-color:white ;"class="p-md-5 shadow">
+                  <img src="/uploads/aboutus/<%=about2[i].about2_image%>" style="margin-top:10px;padding:20px">
+                  <h1 style="margin-top:15px"><%=about2[i].about2_heading%></h1>
+                  <p style="margin-top:20px"><%=about2[i].about2_description%></p>
+
+                
+            </div>
+            </div>
+        <% }%> 
+        <% for (var i=0; i<about3.length;i++){ %>  
+        <div class="col-md-6 animate__animated animate__fadeInUp">
+        <div style="background-color: white;" class="p-md-5 shadow">
+          
+            <img src="/uploads/aboutus/<%=about3[i].about3_image%>" style="margin-top:10px;padding:20px;">
+                <h1 style="margin-top:15px"><%=about3[i].about3_heading%></h1>
+                <p style="margin-top:20px"><%=about3[i].about3_description%></p>
+        </div>
+        </div>
+        <% }%> 
+        </div>
+</div>
+    </div>
+    </div>
+ </div>
+<%- include("footer.ejs") %>
+

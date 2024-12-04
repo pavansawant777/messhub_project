@@ -1,0 +1,30 @@
+<%-include('navbar.ejs')%>
+
+<form action="/admin/save_aboutus_banner" method="post" enctype="multipart/form-data">
+    <div class="container bg-light fw-bold shadow ">
+        <div class="row">
+            <input type="hidden" name="banner_id" value="<%=aboutus_banner.banner_id%>">
+            <div class="col-md-12">
+                <h3 class="heading mb-3">Update About Us Banner</h3>
+            </div>
+            <div class="col-md-6 p-1">
+                <label>About Us Heading</label>
+                <input type="text" name="aboutus_heading" class="form-control" value="<%=aboutus_banner.aboutus_heading%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <label>About Us Banner Image</label>
+                <input type="file" name="aboutus_banner_image" class="form-control" required value="<%=aboutus_banner.aboutus_banner_image%>">
+            </div>
+            <div class="col-md-6 p-1">
+                <img src="/uploads/aboutus/<%=aboutus_banner.aboutus_banner_image%>" style="width: 100px; height: 100px;">
+            </div>
+        </div>
+        <div class="col-md-12 mt-2 mb-2 text-center">
+            <button class="btn text-white bg-primary p-2 mt-2 mb-2">Update About Us Banner</button>
+        </div>
+    </div>
+</form>
+
+
+
+<%-include('footer.ejs')%>

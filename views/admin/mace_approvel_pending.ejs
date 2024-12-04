@@ -1,0 +1,61 @@
+<%-include('navbar.ejs') %>
+
+
+<div class="container-fluid pt-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+          <h3 class="heading page-header mb-4">
+              <span class="background_overlp" >User Mess Approval Pending </span>
+          </h3>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>SNO</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>User Photo</td>
+            <td>Mess Name</td>
+            <td>Mess Photo</td>
+            <td>Area</td>
+            <td></td>
+          </tr>
+          <% for(var i=0;i<user_kyc_data.length;i++) { %>
+            <tr>
+              <td>
+                <a style="text-decoration: none;" href="/admin/delete_user_approval_data/<%=user_kyc_data[i].user_admin_kyc_id%>"> 
+                  <button style="border: 1px solid red;" class="btn p-0 pe-2 pt-1 pb-1 ps-2"> <i class="fas fa-trash text-danger"></i> </button> 
+              </a>
+            </td>
+                <td><%=i+1%></td>
+                <td><%=user_kyc_data[i].user_admin_fname%></td>
+                <td><%=user_kyc_data[i].user_admin_lname%></td>
+                <td><%=user_kyc_data[i].user_admin_email%></td>
+                <td><%=user_kyc_data[i].user_admin_phone%></td>
+                <td>
+                  <img src="/uploads/<%=user_kyc_data[i].user_admin_photo%>" width="50px"/>
+                </td>
+                <td><%=user_kyc_data[i].user_admin_mess_name%></td>
+                <td>
+                  <img src="/uploads/<%=user_kyc_data[i].user_admin_mess_photo%>" width="50px"/>
+                </td>
+                <td><%=user_kyc_data[i].user_admin_mess_area%></td>
+                <td>
+                  <a style="text-decoration: none;border-radius: 5px;" class="" href="/admin/mess_approvel_pending_table/<%=user_kyc_data[i].user_admin_kyc_id%>"> 
+                      <button class="btn  p-0 pe-3 pt-2 pb-2 ps-3" style="font-size: 14px;color: black;background-color: #ffad26;">Approval</button> 
+                  </a>
+              </td>
+            </tr>
+        <% } %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<%-include('footer.ejs') %>

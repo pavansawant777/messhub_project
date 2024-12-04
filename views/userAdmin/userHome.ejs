@@ -1,0 +1,117 @@
+<%- include("Navbar.ejs")%>
+
+
+    <style>
+        .centers {
+            display: grid;
+            align-items: center;
+            text-align: left;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <div class="container bg-white  pl-5 pr-5 pt-4">
+        <div class="row">
+            <div class="col-md-12 ">
+                <h3 class="heading mb-4">Welcome Dashboard</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container bg-white pl-5 pr-5 pt-4 pb-5">
+        <div class="row">
+
+            <div class="col-md-4  " style="margin-top: 12px;">
+                <a href="" style="text-decoration: none;">
+                    <div class="centers" style="height: 100px;width: 300px;background-color: #a38cc6;">
+                        <div>
+                            <% for(var i=0;i<user_admin_kyc_complated_data.length;i++) { %>
+                                <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;">
+                                    <%=user_admin_kyc_complated_data[i].user_admin_kyc_complated_count%>
+                                </span>
+                                <% } %><br>
+                                    <span style="font-size: 17px;color: white;font-family: sans-serif;">Kyc
+                                        Aproval
+                                    </span>
+                                    <br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4  " style="margin-top: 12px;">
+                <a href="" style="text-decoration: none;">
+                    <div class="centers" style="height: 100px;width: 300px;background-color: #2196f3;">
+                        <div>
+                            <% for(var i=0;i<user_admin_kyc_data.length;i++) { %>
+                                <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;">
+                                    <%=user_admin_kyc_data[i].user_admin_kyc_count%>
+                                </span>
+                                <% } %><br>
+                                    <span style="font-size: 17px;color: white;font-family: sans-serif;">User Kyc
+                                        Pending </span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 " style="margin-top: 12px;">
+                <a href="/userAdmin/mess_lunchs" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #ffc241;">
+                    <div>
+                        <% for(var i=0;i<mess_lunch_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_lunch_data[i].mess_lunch_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Lunch </span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-4  " style="margin-top: 12px;">
+                <a href="/admin/mess_dinner" style="text-decoration: none;">
+    
+                <div class="centers" style="height: 100px;width: 300px;background-color: #1dc9b7;">
+                    <div>
+                        <% for(var i=0;i<mess_dinner_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_dinner_data[i].mess_dinner_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Dinner</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-4  " style="margin-top: 12px;">
+                <a href="/admin/mess_services" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #6ab8f7;">
+                    <div>
+                        <% for(var i=0;i<mess_service_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_service_data[i].mess_service_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Service</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-4  " style="margin-top: 12px;">
+                <a href="/userAdmin/mess_blogs" style="text-decoration: none;">
+                <div class="centers" style="height: 100px;width: 300px;background-color: #fe6bb0;">
+                    <div>
+                        <% for(var i=0;i<mess_blogs_data.length;i++) { %>
+                            <span style="font-size: 30px;color: white;font-weight: bold;font-family: sans-serif;"><%=mess_blogs_data[i].mess_blogs_count%></span>
+                        <% } %><br>
+                        <span style="font-size: 17px;color: white;font-family: sans-serif;">Mess Lunch Menu</span><br>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <%- include("Footer.ejs")%>

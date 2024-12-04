@@ -1,0 +1,121 @@
+<%- include('navbar.ejs') %>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<form class="pt-5 bg-white" action="/userAdmin/update_user_admin_profile_data" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="user_admin_kyc_id" value="<%=user_admin_kyc_complated_data.user_admin_kyc_id%>">
+    <div class="container  ">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Update KYC ( profile )</span>
+            </h3>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="user_admin_fname" value="<%=user_admin_kyc_complated_data.user_admin_fname%>" id="firstName" placeholder="Enter first name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="user_admin_lname" value="<%=user_admin_kyc_complated_data.user_admin_lname%>" placeholder="Enter last name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="user_admin_email" value="<%=user_admin_kyc_complated_data.user_admin_email%>" placeholder="Enter email">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="user_admin_phone" value="<%=user_admin_kyc_complated_data.user_admin_phone%>" placeholder="Enter phone number">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="address">User Photo</label>
+            <input type="file" class="form-control" id="address" name="user_admin_photo" value="<%=user_admin_kyc_complated_data.user_admin_photo%>" placeholder="Enter address">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <img src="/uploads/<%=user_admin_kyc_complated_data.user_admin_photo%>" width="200px">
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Enter Your Mess Name</label>
+            <input type="text" class="form-control" id="" name="user_admin_mess_name" value="<%=user_admin_kyc_complated_data.user_admin_mess_name%>" placeholder="Enter Mess Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="state">Enter Mess Photo</label>
+            <input type="file" class="form-control" id="state" name="user_admin_mess_photo" value="<%=user_admin_kyc_complated_data.user_admin_mess_photo%>" placeholder="Enter Mess Photo">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <img src="/uploads/<%=user_admin_kyc_complated_data.user_admin_mess_photo%>" width="200px">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="idProof">Select The Ahmednagar Area</label>
+              <select class="form-control border" id="idProof" name="user_admin_mess_area" value="<%=user_admin_kyc_complated_data.user_admin_mess_area%>">
+                <option class="" value="">Choice</option>
+                <option class="" value="Balika Ashram Road Area">Balika Ashram Road Area</option>
+                <option class="" value="Dilhi get Area">Dilhi get Area</option>
+                <option class="" value="Savidi Area">Savidi Area</option>
+                <option class="" value="Paip Line Road Area">Paip Line Road Area</option>
+              </select>
+            </div>
+          </div>  
+          
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" name="user_admin_address" value="<%=user_admin_kyc_complated_data.user_admin_address%>" placeholder="Enter address">
+            </div>
+          </div>
+          
+      </div>
+      
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187">Update Profile</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+  <br><br>
+
+
+
+<%- include('footer.ejs') %>

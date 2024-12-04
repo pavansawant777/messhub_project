@@ -1,0 +1,79 @@
+<%- include("Navbar.ejs")%>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form class="pt-5 bg-white" action="/userAdmin/update_user_admin_mess_details" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="user_admin_mess_details_id" value="<%=edit_mess_details_data.user_admin_mess_details_id%>">
+    <div class="container  ">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h3 class="heading  mb-4">
+                <span class="background_overlp" >Edit Mess Details</span>
+            </h3>
+        </div>
+    </div>
+      
+      <div class="row">
+        
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Enter Your Mess Name</label>
+            <input type="text" class="form-control" id="" name="user_admin_mess_name"  value="<%=edit_mess_details_data.user_admin_mess_name%>" placeholder="Enter Mess Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="messinfo">Mess Information</label>
+              <input type="text" class="form-control" id="address" name="user_admin_mess_info" value="<%=edit_mess_details_data.user_admin_mess_info%>" placeholder="Enter address">
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="state">Enter Mess Photo</label>
+            <input type="file" class="form-control" id="state" name="user_admin_mess_photo" value="<%=edit_mess_details_data.user_admin_mess_photo%>" placeholder="Enter Mess Photo">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <img src="/uploads/<%=edit_mess_details_data.user_admin_mess_photo%>" width="150px">
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="idProof">Select The Ahmednagar Area</label>
+              <select class="form-control border" id="idProof" name="user_admin_mess_area" value="<%=edit_mess_details_data.user_admin_mess_area%>">
+                <option class="" value="">Choice</option>
+                <option class="" value="Balika Ashram Road Area">Balika Ashram Road Area</option>
+                <option class="" value="Dilhi get Area">Dilhi get Area</option>
+                <option class="" value="Savidi Area">Savidi Area</option>
+                <option class="" value="Paip Line Road Area">Paip Line Road Area</option>
+              </select>
+            </div>
+        </div>  
+          
+        <!-- <div class="col-md-3">
+          <div class="form-group">
+            <label for="idProof">Ahmednagar Area</label>
+            <input type="text" name="user_admin_mess_area" disabled  class="form-control" value="<%=edit_mess_details_data.user_admin_mess_area%>">
+        </div>  
+      </div>  
+       -->
+      </div>
+      
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187">Update Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+
+
+
+<%- include("Footer.ejs")%>

@@ -1,0 +1,47 @@
+<%-include('navbar.ejs') %>
+
+
+<div class="container-fluid pt-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+          <h3 class="heading page-header mb-4">
+              <span class="background_overlp" >User Mess Approval Pending </span>
+          </h3>
+      </div>
+  </div>
+  
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>SNO</td>
+            <td>Mess Name</td>
+            <td>Mess Service Heading</td>
+            <td>Mess Service information</td>
+            <td>Service Photo</td>
+          </tr>
+          <% for(var i=0;i<mess_service_data.length;i++) { %>
+            <tr>
+                <td>
+                    <a style="text-decoration: none;" href="/admin/delete_mess_service_data/<%=mess_service_data[i].mess_service_id%>"> 
+                      <button style="border: 1px solid red;" class="btn p-0 pe-2 pt-1 pb-1 ps-2"> <i class="fas fa-trash text-danger"></i> </button> 
+                  </a>
+                </td>
+                <td><%=i+1%></td>
+                <td><%=mess_service_data[i].user_admin_mess_name%></td>
+                <td><%=mess_service_data[i].service_mess_title%></td>
+                <td><%=mess_service_data[i].service_mess_description%></td>
+                <td>
+                  <img src="/uploads/<%=mess_service_data[i].service_mess_image%>" width="100px"/>
+                </td>
+                
+            </tr>
+        <% } %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<%-include('footer.ejs') %>

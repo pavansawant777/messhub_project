@@ -1,0 +1,48 @@
+<%-include('navbar.ejs')%>
+
+
+
+<div class="container-fluid pt-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+          <h3 class="heading page-header mb-4">
+              <span class="background_overlp" >Mess Blogs</span>
+          </h3>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>SNO</td>
+            <td>Mess Name</td>
+            <td>Mess Blog Heading</td>
+            <td>Mess Blog Decription</td>
+            <td>blog Photo</td>
+          </tr>
+
+          <% for(var i=0;i<mess_blog_data.length;i++) { %>   
+            <tr>
+                <td>
+                    <a style="text-decoration: none;" href="/admin/delete_mess_blog/<%=mess_blog_data[i].mess_blogs_id%>"> 
+                      <button style="border: 1px solid red;" class="btn p-0 pe-2 pt-1 pb-1 ps-2"> <i class="fas fa-trash text-danger"></i> </button> 
+                  </a>
+                </td>
+                <td><%=i+1%></td>
+                <td><%=mess_blog_data[i].user_name%> Mess</td>
+                <td><%=mess_blog_data[i].mess_blog_heading%></td>
+                <td><%=mess_blog_data[i].mess_blog_description%></td>
+                <td>
+                    <img src="/uploads/<%=mess_blog_data[i].mess_blog_images%>" height="100px" class="card-img-top"/>
+                </td>
+            </tr>
+          <% } %>
+
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<%-include('footer.ejs')%>

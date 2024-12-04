@@ -1,0 +1,54 @@
+<%-include('navbar.ejs') %>
+
+
+<div class="container-fluid pt-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+          <h3 class="heading page-header mb-4">
+              <span class="background_overlp" >User Mess Approval Complated </span>
+          </h3>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td>SNO</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>User Photo</td>
+            <td>Mess Name</td>
+            <td>Mess Photo</td>
+            <td>Area</td>
+            <td></td>
+          </tr>
+          <% for(var i=0;i<user_kyc_data.length;i++) { %>
+            <tr>
+                <td><%=i+1%></td>
+                <td><%=user_kyc_data[i].user_admin_fname%></td>
+                <td><%=user_kyc_data[i].user_admin_lname%></td>
+                <td><%=user_kyc_data[i].user_admin_email%></td>
+                <td><%=user_kyc_data[i].user_admin_phone%></td>
+                <td>
+                  <img src="/uploads/<%=user_kyc_data[i].user_admin_photo%>" width="50px"/>
+                </td>
+                <td><%=user_kyc_data[i].user_admin_mess_name%></td>
+                <td>
+                  <img src="/uploads/<%=user_kyc_data[i].user_admin_mess_photo%>" width="50px"/>
+                </td>
+                <td><%=user_kyc_data[i].user_admin_mess_area%></td>
+                
+              <td>
+                <button class="btn  p-0 pe-3 pt-2 pb-2 ps-3" style="font-size: 14px;color: black;background-color: rgba(29,201,183,.5);">Complated</button> 
+            </td>
+            </tr>
+        <% } %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<%-include('footer.ejs') %>

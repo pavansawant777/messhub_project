@@ -1,0 +1,290 @@
+<%-include('Navbar.ejs')%>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <form class="pt-5 bg-white" action="/userAdmin/save_mess_meal" method="post" enctype="multipart/form-data">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <h3 class="heading  mb-4">
+            <span class="background_overlp">Mess Lunch</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="row">
+
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Enter the Mess Your No = 
+              <% for(var i=0;i<user_kyc_profile_data_complated.length;i++) { %>
+                <%=user_kyc_profile_data_complated[i].user_admin_kyc_id%>
+              <% } %>  
+            </label>
+            <input type="text" class="form-control" id="" name="user_admin_kyc_id" placeholder="Enter Mess No">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Enter Your Mess Name</label>
+            <input type="text" class="form-control" id="" name="mess_name" placeholder="Enter Mess Name">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Enter Mess Discription</label>
+            <input type="text" class="form-control" id="state" name="mess_discription" placeholder="Enter Mess Photo">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="messinfo">Mess Image</label>
+            <input type="file" class="form-control" id="address" name="mess_images" placeholder="Enter Information">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <h3 class="heading  mb-4">
+            <span class="background_overlp">Mess Meal</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Sunday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_sunday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Sunday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_sunday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Monday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_monday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Monday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_monday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Tuesday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_tuesday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Tuesday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_tuesday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Wednesday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_wednesday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Wednesday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_wednesday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Thursday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_thursday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Thursday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_thursday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Friday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_friday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Friday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_friday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Saturday Meal Name</label>
+            <input type="text" class="form-control" id="state" name="mess_saturday_meal_name"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="state">Mess Saturday Meal Image</label>
+            <input type="file" class="form-control" id="state" name="mess_saturday_meal_img"
+              placeholder="Enter Meal Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row pb-4 bt-3 text-center">
+        <div class="col-md-12">
+          <button type="submit" class="btn text-white" style="background-color: #525187">Save Meal</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+  <div class="container-fluid p-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <h3 class="heading  mb-4">
+          <span class="background_overlp">Mess Meal Lanch List</span>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>SNO</td>
+            <td>Mess Name</td>
+            <td>Mess Image</td>
+            <td>Sunday Meal</td>
+            <td>Monday Meal</td>
+            <td>Tuesday Meal</td>
+            <td>Wednesday Meal</td>
+            <td>Thursday Meal</td>
+            </tr>
+          <% for(var i=0;i<mess_meal_lunch.length;i++) { %>
+            <tr>
+              <td>
+                <a style="text-decoration: none;" class="bg-white"
+                  href="/userAdmin/edit_mess_meal_lunch/<%=mess_meal_lunch[i].mess_lunch_id%>">
+                  <button style="border: 2px solid rgb(62, 96, 190);border-radius: 3px;"
+                    class="btn bg-white pl-2 pr-1 pt-2 pb-2"> <i class="fa fa-edit"
+                      style="color: rgb(62, 96, 190);"></i></button>
+                </a>
+                <a style="text-decoration: none;" class="bg-white" href="/userAdmin/delete_mess_meal_lunch/<%=mess_meal_lunch[i].mess_lunch_id%>"> 
+                  <button style="border: 2px solid red;border-radius: 3px;" class="btn bg-white pl-2 pr-1 pt-2 pb-2"> 
+                    <i class="fa fa-trash-o text-danger" aria-hidden="true"></i>
+                  </button> 
+                </a>
+              </td>
+              <td><%=i+1%></td>
+              <td><%=mess_meal_lunch[i].user_admin_mess_name%></td>
+              <td>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_images%>" alt="" width="100px" height="110px">
+              </td>
+              <td>
+                <%=mess_meal_lunch[i].mess_sunday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_sunday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=mess_meal_lunch[i].mess_monday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_monday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=mess_meal_lunch[i].mess_tuesday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_tuesday_meal_img%>" alt="" width="100px">
+              </td>
+
+              <td>
+                <%=mess_meal_lunch[i].mess_wednesday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_wednesday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=mess_meal_lunch[i].mess_thursday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_thursday_meal_img%>" alt="" width="100px">
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Friday Meal</td>
+              <td>Saturday Meal</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <%=mess_meal_lunch[i].mess_friday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_friday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=mess_meal_lunch[i].mess_saturday_meal_name%><br><br>
+                <img src="/uploads/<%=mess_meal_lunch[i].mess_saturday_meal_img%>" alt="" width="100px">
+              </td>
+            </tr>
+            <% } %>
+
+        </table>
+
+      </div>
+    </div>
+  </div> 
+
+  <%-include('Footer.ejs')%>

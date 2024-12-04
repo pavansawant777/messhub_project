@@ -1,0 +1,93 @@
+<%-include('navbar.ejs')%>
+
+
+  <div class="container-fluid p-5 bg-white">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <h3 class="heading page-header mb-4">
+          <span class="background_overlp">All Mess Lunch List</span>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <tr>
+            <td></td>
+            <td>SNO</td>
+            <td>Mess Name</td>
+            <td>Mess Image</td>
+            <td>Sunday Meal</td>
+            <td>Monday Meal</td>
+            <td>Tuesday Meal</td>
+            <td>Wednesday Meal</td>
+            <td>Thursday Meal</td>
+          </tr>
+          <% for(var i=0;i<menu_meal_lunch.length;i++) { %>
+            <tr>
+              <td>
+                <a style="text-decoration: none;" href="/admin/delete_menu_meal_lunch/<%=menu_meal_lunch[i].mess_lunch_id%>"> 
+                  <button style="border: 1px solid red;" class="btn p-0 pe-2 pt-1 pb-1 ps-2"> <i class="fas fa-trash text-danger"></i> </button> 
+                </a>
+
+              </td>
+              <td>
+                <%=i+1%>
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].user_admin_mess_name%>
+              </td>
+              <td>
+                <img src="/uploads/<%=menu_meal_lunch[i].mess_images%>" alt="" width="100px" height="110px">
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].mess_sunday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_sunday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].mess_monday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_monday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].mess_tuesday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_tuesday_meal_img%>" alt="" width="100px">
+              </td>
+
+              <td>
+                <%=menu_meal_lunch[i].mess_wednesday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_wednesday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].mess_thursday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_thursday_meal_img%>" alt="" width="100px">
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Friday Meal</td>
+              <td>Saturday Meal</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <%=menu_meal_lunch[i].mess_friday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_friday_meal_img%>" alt="" width="100px">
+              </td>
+              <td>
+                <%=menu_meal_lunch[i].mess_saturday_meal_name%><br><br>
+                  <img src="/uploads/<%=menu_meal_lunch[i].mess_saturday_meal_img%>" alt="" width="100px">
+              </td>
+            </tr>
+            <% } %>
+
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <%-include('footer.ejs')%>
